@@ -1,10 +1,13 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+   before_action :get_members, only: [:new, :create, :edit, :update]
 
   # GET /tasks
   # GET /tasks.json
   def index
     @tasks = Task.all
+    @tasks = Task.order("end_date desc")
+   
   end
 
   # GET /tasks/1
@@ -15,6 +18,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+    @members = Member.all.map { |member| [member.name, member.id] }
   end
 
   # GET /tasks/1/edit
@@ -65,6 +69,10 @@ class TasksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_task
       @task = Task.find(params[:id])
+    end
+    
+    def get_members
+      @members = Member.all.map { |member| [member.name, member.id] }
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

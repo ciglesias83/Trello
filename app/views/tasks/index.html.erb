@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Description</th>
+      
       <th>Duration</th>
       <th>Start date</th>
       <th>End date</th>
@@ -18,11 +18,11 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.title %></td>
-        <td><%= task.description %></td>
+        
         <td><%= task.duration %></td>
         <td><%= task.start_date %></td>
         <td><%= task.end_date %></td>
-        <td><%= task.member_id %></td>
+        <td><%= task.member.name %></td>
         <td><%= task.checklist %></td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
