@@ -1,4 +1,4 @@
-es:
+ es:
   devise:
     confirmations:
       confirmed: "Tu cuenta ha sido confirmada."

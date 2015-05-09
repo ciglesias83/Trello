@@ -1,15 +1,15 @@
-<h1>Listing tasks</h1>
+<h1><%= t('Listing tasks') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th><%= t('Title') %></th>
       
-      <th>Duration</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Member</th>
-      <th>Checklist</th>
+      <th><%= t('Duration') %></th>
+      <th><%= t('Start date') %></th>
+      <th><%= t('End date') %></th>
+      <th><%= t('Member') %></th>
+      <th><%= t('Checklist') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -41,13 +41,13 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th><%= t('Title') %></th>
       
-      <th>Duration</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Member</th>
-      <th>Checklist</th>
+      <th><%= t('Duration') %></th>
+      <th><%= t('Start date') %></th>
+      <th><%= t('End date') %></th>
+      <th><%= t('Member') %></th>
+      <th><%= t('Checklist') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -80,4 +80,4 @@
 </table>
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+<%= link_to t('New Task'), new_task_path %>
