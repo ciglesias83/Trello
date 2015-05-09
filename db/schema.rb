@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 20150509161756) do
     t.string   "lastname"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "member_id"
-    t.string   "member_username"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -30,6 +28,8 @@ ActiveRecord::Schema.define(version: 20150509161756) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "member_id"
+    t.string   "member_username"
   end
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true

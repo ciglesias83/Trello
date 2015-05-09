@@ -1,8 +1,9 @@
 es:
     activerecord:
         attributes:
-            user:
+            member:
                 name: "Nombre"
     "Log In": "Autenticarse"
     "Sign In": "Ingresar" 
-    "Tasks": "Tareas"    
+    "Tasks": "Tareas"
+    "Members": "Miembros"

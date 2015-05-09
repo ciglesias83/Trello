@@ -24,9 +24,9 @@
         <td><%= task.end_date %></td>
         <td><%= task.member.fullname %></td>
         <td> <%  if task.checklist %>
-              <%= "Terminado" %>
+              <%= "Finished" %>
               <% else%>
-              <%= "Pendiente" %>
+              <%= "Pending" %>
               <% end%>
         </td>
         <td><%= link_to 'Show', task %></td>
@@ -63,9 +63,9 @@
         <td><%= task.member.fullname %></td>
         <td>
               <%  if task.checklist %>
-              <%= "Terminado" %>
+              <%= "Finished" %>
               <% else%>
-              <%= "Pendiente" %>
+              <%= "Pending" %>
               <% end%>
                       
          
