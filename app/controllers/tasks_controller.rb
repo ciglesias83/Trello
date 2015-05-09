@@ -1,13 +1,19 @@
 class TasksController < ApplicationController
+
+  before_action :task_noended, only: [:index]
+  before_action :task_ended, only: [:index]
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :get_members, only: [:new, :create, :edit, :update]
+   
+
    before_action :get_members, only: [:new, :create, :edit, :update]
-   before_action :authenticate_member!, only: [:new, :create, :edit, :update, :destroy]
+
 
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
-    @tasks = Task.order("end_date desc")
+    @tasks = Task.where(checklist: false).order("end_date asc")
+    @tasks1 = Task.where(checklist: true).order("end_date asc")
    
   end
 
@@ -80,4 +86,13 @@ class TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:title, :description, :duration, :start_date, :end_date, :member_id, :checklist)
     end
+    
+    def task_noended
+      @task = Task.where(checklist: false)
+    end
+    
+    def task_ended
+      @task1 = Task.where(checklist: true)
+    end
+
 end
