@@ -28,7 +28,7 @@
         <ul class="right">
           <% if member_signed_in? %>
           <li class="active">
-            <%= link_to current_user.fullname, edit_member_registration_path %>
+            <%= link_to current_member.fullname, edit_member_registration_path %>
           </li>
           <li>
             <%= link_to 'Sign Out', destroy_member_session_path, method: :delete %>
