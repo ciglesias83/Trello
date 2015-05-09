@@ -4,10 +4,11 @@ class TasksController < ApplicationController
   before_action :task_ended, only: [:index]
   before_action :set_task, only: [:show, :edit, :update, :destroy]
   before_action :get_members, only: [:new, :create, :edit, :update]
+  before_action :authenticate_member!, only: [:new, :create, :edit, :update, :destroy]
+  
    
 
-   before_action :get_members, only: [:new, :create, :edit, :update]
-
+   
 
   # GET /tasks
   # GET /tasks.json
@@ -36,6 +37,7 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(task_params)
+    @task.member_id = current_member.id
 
     respond_to do |format|
       if @task.save

@@ -27,12 +27,16 @@
 
 <p>
   <strong>Member:</strong>
-  <%= @task.member_id %>
+  <%= @task.member.fullname %>
 </p>
 
 <p>
   <strong>Checklist:</strong>
-  <%= @task.checklist %>
+  <%  if @task.checklist %>
+  <%= "Terminado" %>
+  <% else%>
+  <%= "Pendiente" %>
+  <% end%>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
