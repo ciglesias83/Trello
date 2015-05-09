@@ -21,6 +21,7 @@ es:
     "Members": "Miembros"
     "Log in": "Ingresar" 
     "Sign up": "Registrarse" 
+    "Sign Up": "Registrarse" 
     "Listing members": "Listado de miembros"
     "Title": "Título"
     "Duration": "Duración"
@@ -35,3 +36,5 @@ es:
     "Show": "Mostrar"
     "Destroy": "Eliminar"
     "Are you sure?": "Estás seguro?"
+    "Pending": "Pendiente"
+    "Finished": "Terminado"
