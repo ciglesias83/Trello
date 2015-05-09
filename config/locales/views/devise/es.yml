@@ -1,8 +1,30 @@
 es:
     activerecord:
         attributes:
-            user:
+            member:
                 name: "Nombre"
+                lastname: "Apellido"
+                username: "Usuario"
+                email: "Correo electrónico"
+                password: "Contraseña"
+                password_confirmation: "Repetir Contraseña"
+            task:
+                title: "Título"
+                duration: "Duración"
+                start_date: "Hora de inicio"
+                end_date: "Hora final"
+                member_id: "Miembro"
+                checklist: "Estado"
     "Log In": "Autenticarse"
     "Sign In": "Ingresar" 
-    "Tasks": "Tareas"    
+    "Log in": "Ingresar" 
+    "Sign up": "Registrarse" 
+    "Tasks": "Tareas"
+    "Member": "Miembro"
+    "Listing members": "Listado de miembros"
+    "Title": "Título"
+    "Duration": "Duración"
+    "Start date": "Hora de inicio"
+    "End date": "Hora de finalización"
+    "Checklist": "Estado"
+    
