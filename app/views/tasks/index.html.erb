@@ -22,8 +22,13 @@
         <td><%= task.duration %></td>
         <td><%= task.start_date %></td>
         <td><%= task.end_date %></td>
-        <td><%= task.member.name %></td>
-        <td><%= task.checklist %></td>
+        <td><%= task.member.fullname %></td>
+        <td> <%  if task.checklist %>
+              <%= "Terminado" %>
+              <% else%>
+              <%= "Pendiente" %>
+              <% end%>
+        </td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -55,8 +60,16 @@
         <td><%= task.duration %></td>
         <td><%= task.start_date %></td>
         <td><%= task.end_date %></td>
-        <td><%= task.member.name %></td>
-        <td><%= task.checklist %></td>
+        <td><%= task.member.fullname %></td>
+        <td>
+              <%  if task.checklist %>
+              <%= "Terminado" %>
+              <% else%>
+              <%= "Pendiente" %>
+              <% end%>
+                      
+         
+          </td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
