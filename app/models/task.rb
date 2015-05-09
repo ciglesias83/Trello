@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
     validates :title, presence: true
     validates :description, presence: true
     validates :description, length: { maximum: 100 }
-    
+    validates :duration, presence: true, numericality: true
     
     
   
