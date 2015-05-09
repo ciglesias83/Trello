@@ -6,6 +6,9 @@ class TasksController < ApplicationController
   before_action :get_members, only: [:new, :create, :edit, :update]
    
 
+   before_action :get_members, only: [:new, :create, :edit, :update]
+
+
   # GET /tasks
   # GET /tasks.json
   def index
