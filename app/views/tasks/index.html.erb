@@ -29,9 +29,9 @@
               <%= "Pendiente" %>
               <% end%>
         </td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('Show'), task %></td>
+        <td><%= link_to t('Edit'), edit_task_path(task) %></td>
+        <td><%= link_to t('Destroy'), task, method: :delete, data: { confirm: t('Are you sure?') } %></td>
       </tr>
       
     <% end %>
@@ -70,9 +70,9 @@
                       
          
           </td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('Show'), task %></td>
+        <td><%= link_to t('Edit'), edit_task_path(task) %></td>
+        <td><%= link_to t('Destroy'), task, method: :delete, data: { confirm: t('Are you sure?') } %></td>
       </tr>
       
     <% end %>

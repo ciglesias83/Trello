@@ -1,37 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('Title') %>:</strong>
   <%= @task.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('Description') %>:</strong>
   <%= @task.description %>
 </p>
 
 <p>
-  <strong>Duration:</strong>
+  <strong><%= t('Duration') %>:</strong>
   <%= @task.duration %>
 </p>
 
 <p>
-  <strong>Start date:</strong>
+  <strong><%= t('Start date') %>:</strong>
   <%= @task.start_date %>
 </p>
 
 <p>
-  <strong>End date:</strong>
+  <strong><%= t('End date') %>:</strong>
   <%= @task.end_date %>
 </p>
 
 <p>
-  <strong>Member:</strong>
+  <strong><%= t('Member') %>:</strong>
   <%= @task.member.fullname %>
 </p>
 
 <p>
-  <strong>Checklist:</strong>
+  <strong><%= t('Checklist') %>:</strong>
   <%  if @task.checklist %>
   <%= "Terminado" %>
   <% else%>
@@ -39,5 +39,5 @@
   <% end%>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to t('Edit'), edit_task_path(@task) %> |
+<%= link_to t('Back'), tasks_path %>
